@@ -1,47 +1,38 @@
-
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Drive Mad S</title>
-    <meta name="fancade:guid" content="61520BFE8B79E9D8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://sdk.enjoy4fun.com/cdn/fancade/1.0.0/fancade_stripped.css">
-    <script
-            id="gamebridge-sdk"
-            src="https://sdk.enjoy4fun.com/v1/gamebridge-sdk.js"
-            data-ad-frequency="30s"
-            data-gameid="cfd42dursfek45civn50"></script>
-</head>
-<body id="body">
-<div id="canvas_border" class="emscripten_border">
-    <div id="play_content" class="middle center">
-        <div class="edge">
-            <div class="box">
-                <div class="black">
-                    <img src="icon.jpg" class="cover">
-                    <p class="title">Drive Mad S</p>
-                    <p class="author">Codii</p>
-                </div>
-            </div>
-        </div>
-        <div id="progress_or_play">
-            <progress id="progress" class="loading" value="0" max="100"></progress>
-        </div>
-        <p class="description">Just A 'Small' Drive Mad Mod.</p></div>
-    <canvas class="emscripten" id="canvas" tabindex="-1"></canvas>
-    <div id="gradient"></div>
-    <div id="webview_content"></div>
-</div>
-<script>
-    // 公共资源地址
-    var cndHref = 'https://sdk.enjoy4fun.com/cdn/fancade/1.0.0/';
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Image Right on Hover</title>
+<style>
+  /* Container to hold the image */
+  .image-container {
+    width: 300px;           /* Code review comment -> Consider making this width responsive using percentages or max-width for better adaptability on different screen sizes */
+    overflow: hidden;       /* Code review comment -> Good use of overflow hidden to prevent image overflow during slide */
+    border: 2px solid #ccc; /* Code review comment -> Optional styling; could be moved to a theme or class for reusability */
+  }
 
-    // 当前是否展开全屏
-    var stretchMode = true;
-</script>
-<script type="text/javascript" src="https://sdk.enjoy4fun.com/cdn/fancade/1.0.0/source_min_stripped.js"></script>
-<script type="text/javascript" src="https://sdk.enjoy4fun.com/cdn/fancade/1.0.0/index_stripped.js"></script>
+  /* Image styling */
+  .image-container img {
+    width: 100%;            /* Code review comment -> Ensures image scales with container; good for responsiveness */
+    display: block;         /* Code review comment -> Removes unwanted bottom whitespace caused by inline-block images */
+    transition: transform 0.5s ease; /* Code review comment -> Smooth animation; could consider using 'ease-in-out' for a more natural feel */
+  }
+
+  /* Slide to the right on hover */
+  .image-container:hover img {
+    transform: translateX(20px); /* Code review comment -> Works well; consider using percentage for proportional movement on different image sizes */
+  }
+</style>
+</head>
+<body>
+
+<h2>Slide Image to Right on Hover</h2> <!-- Code review comment -> Heading is descriptive; could be styled for better visual hierarchy -->
+
+<div class="image-container">
+  <img src="https://via.placeholder.com/300x200" alt="Sample Image"> <!-- Code review comment -> Placeholder image is fine for demo; replace with actual image in production -->
+</div>
+
 </body>
 </html>
+
