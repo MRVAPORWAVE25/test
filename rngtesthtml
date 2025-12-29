@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Random Text Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #randomText {
+      font-size: 1.5em;
+      color: #333;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Random Text Generator</h1>
+<button onclick="showRandomText()">Get Random Text</button>
+<div id="randomText"></div>
+
+<script>
+  // Array of sample text strings
+  const texts = [
+    "Hello, world!",
+    "JavaScript makes web pages interactive.",
+    "W3Schools is a great place to learn.",
+    "Random text is fun!",
+    "Coding is creative problem solving."
+  ];
+
+  // Function to display random text
+  function showRandomText() {
+    if (texts.length === 0) {
+      document.getElementById("randomText").innerText = "Lol";
+      return;
+    }
+    const randomIndex = Math.floor(Math.random() * texts.length);
+    document.getElementById("randomText").innerText = texts[randomIndex];
+  }
+</script>
+
+</body>
+</html>
